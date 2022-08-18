@@ -46,16 +46,35 @@ header.header_site{
 }
 .header_site ul.desktop li{
     margin: 0 5px;
+    text-align: center;
 }
 .header_site ul li a{
-    font-size: 21px;
-    padding: 10px;
-    /* background-color: red; */
+    font-size: 23px;
+    padding: 5px 10px;
     color: white;
+    text-align: center;
+    position: relative;
 }
 .header_site ul li a:hover{
-    font-size: 23px;
-    transition: 0.7s;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.header_site ul li a::after{
+    backface-visibility: hidden;
+    content: '';
+    width: 0px;
+    margin: 0 3%;
+    bottom: 0px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    border: 1px solid rgb(255, 255, 255, 000);
+    transition: 0.5s ease-in-out;
+}
+.header_site ul li a:hover:after{
+    border: 1px solid rgb(255, 255, 255);
+    transition: width 0.5s ease-in-out;
+    width: 90%;
 }
 
 /* Banner */
@@ -64,6 +83,7 @@ section.banner{
     width: 100%;
     height: 85vh;
     min-height: 600px;
+    padding: 5%;
     color: white;
     background-image: url('../img/banner3.jpg');
     background-size: 100% 150%;
@@ -103,6 +123,8 @@ section.banner{
     padding: 7px;
     color: white;
     background-color: #0B74FF;
+
+    animation: Atention 0.8s 2.2s alternate;   
 }
 .banner_text a:hover{
     transform: scale(1.03);
@@ -172,6 +194,9 @@ article.about{
     align-items: center;
     box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
 }
+.skills:hover{
+    animation: FlipCard 0.5s forwards;
+}
 .skills i{
     padding: 10px;
     font-size: 100px;
@@ -239,7 +264,6 @@ section.project{
     align-items: center;
     justify-content: flex-end;
     background-color: white;
-
 }
 .project_info i{
     margin-right: 10px;
@@ -268,7 +292,7 @@ section.project{
 .project_info .a:nth-of-type(2):hover{
     background-color: rgb(99, 99, 99);
     
-}
+} 
 
 /* Contact */
 
@@ -329,4 +353,30 @@ footer.footer_site{
 .footer_site span{
     font-size: 17px;
     font-weight: 300;
+}
+
+/* KeyFrames */
+
+@keyframes Atention {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      transform: translateX(10px);
+    }
+    80% {
+      transform: translateX(8px);
+    }
+    90% {
+      transform: translateX(-8px);
+    }
 }
