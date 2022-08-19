@@ -7,6 +7,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4e970c241.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <link rel="stylesheet" href="css/style.css"/>
     <title>Portifólio</title>
@@ -18,25 +19,38 @@
 
             <nav>
                 <ul class="desktop">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#project">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
+
+                <div class="group_i">
+                    <i  class="fa-solid fa-bars"></i>
+                    <i  class="fa-solid fa-xmark"></i>
+                </div><!--Group I-->
+
+
+                <ul class="app">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Loja</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul><!--Desktop-->
             </nav>
         </div><!--Center-->
     </header><!--Header Site-->
 
-    <section class="banner">
+    <section class="banner" id="home">
         <div class="banner_text center">
             <!-- <img src="img/banner.jpg" alt=""> -->
             <h2>De o próximo passo para o seu negócio!</h2>
             <p>Crie seu site agora mesmo!!!</p>
-            <a href="">Saiba mais!</a>
+            <a href="#about">Saiba mais!</a>
         </div><!--Banner Text-->
     </section><!--Banner-->
 
-    <article class="about center">
+    <article class="about center" id="about">
         <section class="about_info">
             <div class="info_text">
                 <h2>Sobre mim</h2>
@@ -49,103 +63,207 @@
         <section class="about_skills center">
             <h2>Minhas Skills</h2>
 
-            <div class="info_skills" id="projeto">
-                <div class="skills">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+            <div class="info_skills">
+            
+                <div class="group_skills">
+                    <div class="skills">
+                        <i class="fa-brands fa-html5"></i>
+                        <h3>Html</h3>
+                    </div><!--Skills-->
 
-                <div class="skills">
-                    <i class="fa-brands fa-css3"></i>
-                    <h3>Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+                    <div class="skills">
+                        <i class="fa-brands fa-css3"></i>
+                        <h3>Css</h3>
+                    </div><!--Skills-->
 
-                <div class="skills">
-                    <i class="fa-brands fa-js"></i>
-                    <h3>Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+                    <div class="skills">
+                        <i class="fa-brands fa-js"></i>
+                        <h3>Js</h3>
+                    </div><!--Skills-->
 
-                <div class="skills">
-                    <i class="fa-brands fa-react"></i>                    
-                    <h3>Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+                    <div class="skills">
+                        <i class="fa-brands fa-react"></i>                    
+                        <h3>React</h3>
+                    </div><!--Skills-->
 
-                <div class="skills">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <h3>Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+                    <div class="skills">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <h3>Git</h3>
+                    </div><!--Skills-->
 
-                <div class="skills">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>Skills</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloribus in suscipit velit</p>
-                </div><!--Skills-->
+                    <div class="skills">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Bd</h3>
+                    </div><!--Skills-->
+                </div><!--Group Skills-->
+
+                <div class="group_percente">
+                    <img src="img/coding1.png" alt="">
+                    
+                    <div><progress value="99" max="100"></progress> <i class="fa-brands fa-html5"></i> <span>HTML</span></div>
+
+                    <div><progress value="99" max="100"></progress> <i class="fa-brands fa-css3"></i> <span>CSS</span></div>
+
+                    <div><progress value="75" max="100"></progress> <i class="fa-brands fa-js"></i> <span>JS</span></div>
+
+                    <div><progress value="30" max="100"></progress> <i class="fa-brands fa-react"></i>  <span>REACT</span></div>
+
+                    <div><progress value="50" max="100"></progress> <i class="fa-brands fa-git-alt"></i> <span>GIT</span></div>
+
+                    <div><progress value="50" max="100"></progress> <i class="fa-solid fa-database"></i> <span>BD</span></div>
+                </div><!--Group Percente-->
             </div><!--Info Skills-->
         </section><!--About Skills-->
     </article><!--ABout-->
 
-    <section class="project">
+    <section class="project" id="project">
         <h2>Projetos</h2>
         <div class="center">
-            <div class="project_info">
-                <div class="a">
-                    <i class="fa-solid fa-eye"></i>
-                    <p>Vizualizar</p>
+            <div class="project_info" style="background-image: url('img/loja_arcade.png');">
+                <div>
+                    <a href="https://fabriluan.github.io/site_games/" target="_blank">
+
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Vizualizar</p>
+                    </a>
+                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
-                <div class="a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></div>
+
+
+                <table class="info_back">
+                    <tr>
+                        <th colspan="2">Nome do Projeto</th>
+                    </tr>
+                    <tr>
+                        <td>Tecnologias usadas: </td>
+                        <td>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feito em: </td>
+                        <td>2 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel de dificuldade: </td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Voltar</th>
+                    </tr>
+                </table><!--Info Back-->
             </div><!--Project Info-->
 
-            <div class="project_info">
-                <div class="a">
-                    <i class="fa-solid fa-eye"></i>
-                    <p>Vizualizar</p>
+            <div class="project_info" style="background-image: url('img/site_tigres.png');">
+                <div>
+                    <a href="https://fabriluan.github.io/site_tigres/" target="_blank">
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Vizualizar</p>
+                    </a>
+                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
-                <div class="a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></div>
+
+                <table class="info_back">
+                    <tr>
+                        <th colspan="2">Nome do Projeto</th>
+                    </tr>
+                    <tr>
+                        <td>Tecnologias usadas: </td>
+                        <td>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feito em: </td>
+                        <td>2 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel de dificuldade: </td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Voltar</th>
+                    </tr>
+                </table><!--Info Back-->
             </div><!--Project Info-->
 
-            <div class="project_info">
-                <div class="a">
-                    <i class="fa-solid fa-eye"></i>
-                    <p>Vizualizar</p>
+            <div class="project_info" style="background-image: url('img/ebook.png');">
+                <div>
+                    <a href="https://fabriluan.github.io/site_dowload_ebook/" target="_blank">
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Vizualizar</p>
+                    </a>
+                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
-                <div class="a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></div>
+
+
+                <table class="info_back">
+                    <tr>
+                        <th colspan="2">Nome do Projeto</th>
+                    </tr>
+                    <tr>
+                        <td>Tecnologias usadas: </td>
+                        <td>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feito em: </td>
+                        <td>2 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel de dificuldade: </td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th>Voltar</th>
+                    </tr>
+                </table><!--Info Back-->
             </div><!--Project Info-->
 
         </div><!--Center-->
         <span>Todos os projetos foram feitos para fins de estudo</span>
     </section><!--Projects-->
 
-    <article class="contact">
+    <article class="contact" id="contact">
         <h3>Entre em contato</h3>
-        <div class="center">
-            <section class="contact_social">
-                <h2>Redes Socias:</h2>
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                    - Instagram
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-github"></i>
-                    - GitHub
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-linkedin"></i>
-                    - Linkedin
-                </a>
-            </section><!--Contact Social-->
-            
-            <section class="contact_personal">
-                <h2>Outras formas de contato</h2>
-                <div><i class="fa-solid fa-envelope"></i> Email: fabriciozambaocipriano@gmail.com</div>
+        <section class="group_contact center">
+            <div class="contact_info">
+                <i class="fa-solid fa-envelope"></i>
+                <h2>Email</h2>
+                <a>fabriciozambaocipriano<wbr>@gmail.com</a>
+            </div><!--Contact Info-->
 
-                <div><i class="fa-brands fa-whatsapp"></i> WhatsApp: (42) 99864-9151</div>
-            </section><!--Contact Personal-->
-        </div><!--Center-->
+            <div class="contact_info">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h2>Whatsapp</h2>
+                <a href="#">(42) 99864-9151</a>
+            </div><!--Contact Info-->
+
+            <div class="contact_info">
+                <i class="fa-brands fa-instagram"></i>
+                <h2>Instagram</h2>
+                <a href="">@fabri_luan</a>
+            </div><!--Contact Info-->
+
+            <div class="contact_info">
+                <i class="fa-brands fa-linkedin"></i>
+                <h2>Linkedin</h2>
+                <a href="">@fabri_luan</a>
+            </div><!--Contact Info-->
+            <div class="contact_info">
+                <i class="fa-brands fa-github"></i>
+                <h2>GitHub</h2>
+                <a href="">@fabri_luan</a>
+            </div><!--Contact Info-->
+        </section>
+        
     </article><!--Contact-->
 
     <footer class="footer_site">
