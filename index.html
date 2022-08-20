@@ -17,7 +17,7 @@
         <div class="center">
             <h2 class="logo">Fabricio</h2>
 
-            <nav>
+            <nav class="navbar">
                 <ul class="desktop">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Sobre</a></li>
@@ -25,16 +25,16 @@
                     <li><a href="#contact">Contato</a></li>
                 </ul>
 
-                <div class="group_i">
-                    <i  class="fa-solid fa-bars"></i>
-                    <i  class="fa-solid fa-xmark"></i>
+                <div id="menu_view" class="group_i">
+                    <i id="menu_show" class="fa-solid fa-bars"></i>
+                    <i id="menu_hidden" class="fa-solid fa-xmark"></i>
                 </div><!--Group I-->
 
 
                 <ul class="app">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#product">Loja</a></li>
                     <li><a href="#about">Sobre</a></li>
+                    <li><a href="#project">Projeto</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul><!--Desktop-->
             </nav>
@@ -54,7 +54,7 @@
         <section class="about_info">
             <div class="info_text">
                 <h2>Sobre mim</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt eius quisquam error nesciunt reiciendis doloribus temporibus, mollitia debitis incidunt eos dolor, minus nisi laboriosam animi, aspernatur repellendus praesentium? Est, velit!</p>
+                <p>Olá meu nome é Fabricio, sou programador Front-End, buscando a primeira oportunidade no mercado de trabalho, sou um estudante na area de TI, sempre busco evoluir em todas as aréas possíveis, domino criação de Landing Pages</p>
             </div><!--Info Text-->
             
             <img src="" alt="">
@@ -120,13 +120,13 @@
         <h2>Projetos</h2>
         <div class="center">
             <div class="project_info" style="background-image: url('img/loja_arcade.png');">
-                <div>
+                <div class="info_front">
                     <a href="https://fabriluan.github.io/site_games/" target="_blank">
 
                         <i class="fa-solid fa-eye"></i>
                         <p>Vizualizar</p>
                     </a>
-                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
+                    <a class="info_a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
 
 
@@ -151,18 +151,18 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <th>Voltar</th>
+                        <th class="back_a">Voltar</th>
                     </tr>
                 </table><!--Info Back-->
             </div><!--Project Info-->
 
             <div class="project_info" style="background-image: url('img/site_tigres.png');">
-                <div>
+                <div class="info_front">
                     <a href="https://fabriluan.github.io/site_tigres/" target="_blank">
                         <i class="fa-solid fa-eye"></i>
                         <p>Vizualizar</p>
                     </a>
-                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
+                    <a class="info_a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
 
                 <table class="info_back">
@@ -186,18 +186,18 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <th>Voltar</th>
+                        <th class="back_a">Voltar</th>
                     </tr>
                 </table><!--Info Back-->
             </div><!--Project Info-->
 
             <div class="project_info" style="background-image: url('img/ebook.png');">
-                <div>
+                <div class="info_front">
                     <a href="https://fabriluan.github.io/site_dowload_ebook/" target="_blank">
                         <i class="fa-solid fa-eye"></i>
                         <p>Vizualizar</p>
                     </a>
-                    <a><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
+                    <a class="info_a"><i class="fa-solid fa-circle-info"></i><p>Informações</p></a>
                 </div>
 
 
@@ -222,7 +222,7 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <th>Voltar</th>
+                        <th class="back_a">Voltar</th>
                     </tr>
                 </table><!--Info Back-->
             </div><!--Project Info-->
@@ -237,7 +237,7 @@
             <div class="contact_info">
                 <i class="fa-solid fa-envelope"></i>
                 <h2>Email</h2>
-                <a>fabriciozambaocipriano<wbr>@gmail.com</a>
+                <a id="email">fabriciozambaocipriano<wbr>@gmail.com</a>
             </div><!--Contact Info-->
 
             <div class="contact_info">
@@ -249,18 +249,18 @@
             <div class="contact_info">
                 <i class="fa-brands fa-instagram"></i>
                 <h2>Instagram</h2>
-                <a href="">@fabri_luan</a>
+                <a href="https://github.com/fabriluan/" target="_blank">@fabri_luan</a>
             </div><!--Contact Info-->
 
             <div class="contact_info">
                 <i class="fa-brands fa-linkedin"></i>
                 <h2>Linkedin</h2>
-                <a href="">@fabri_luan</a>
+                <a href="https://br.linkedin.com/in/fabricio-cipriano-a72672248?trk=people-guest_people_search-card" target="_blank">@fabri_luan</a>
             </div><!--Contact Info-->
             <div class="contact_info">
                 <i class="fa-brands fa-github"></i>
                 <h2>GitHub</h2>
-                <a href="">@fabri_luan</a>
+                <a href="https://www.instagram.com/fabri_luan" target="_blank">@fabri_luan</a>
             </div><!--Contact Info-->
         </section>
         
@@ -270,5 +270,7 @@
         <span>Todos os direitos reservados para Fabricio Luan Zambão Cipriano &copy;</span>
     </footer>
 
+    <script src="js/function.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
