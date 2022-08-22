@@ -66,3 +66,20 @@ function ActivateCard(){
 
 
 }
+
+AnimationBtn();
+function AnimationBtn(){
+
+  const btn = document.querySelector('.banner_text > a');
+
+  let timeout = 3000;
+
+  setInterval(() => {
+    btn.style.animation = 'Atention 1.2s alternate';
+  }, 1800);
+
+  setInterval(() => {
+    btn.style.animation = 'Atention 1.2s infinite';
+  }, 3000);
+  
+}
