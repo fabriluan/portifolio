@@ -178,11 +178,15 @@ article.about{
 .info_text p{
     font-size: 21px;
 }
-.about_info img{
+.about_info .img{
     width: 25%;
     height: 300px;
     background-color: red;
     border-radius: 100% 100%;
+
+    background-image: url('../img/foto_perfil.jpg');
+    background-position: 45% 52%;
+    background-size: 270%;
 }
 .about_skills{
     margin-top: 20px;
@@ -556,7 +560,7 @@ footer.footer_site{
     .info_text{
         width: 55%;
     }
-    .about_info img{
+    .about_info .img{
         width: 40%;
     }
 
@@ -609,7 +613,7 @@ footer.footer_site{
         width: 100%;
         text-align: center;
     }
-    .about_info img{
+    .about_info .img{
         min-width: 250px;
     }
 
@@ -683,7 +687,7 @@ footer.footer_site{
 
 @media screen and (max-width: 700px){
     /* About */
-    .about_info img{
+    .about_info .img{
         min-width: 60%;
     }
 
