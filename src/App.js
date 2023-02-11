@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import About from "./components/layout/About";
 import Header from "./components/layout/Header";
 import GlobalStyles from "./globalStyles";
 import { ligthTheme } from "./styles/theme";
@@ -8,7 +9,8 @@ function App() {
     <ThemeProvider theme={ ligthTheme }>
       <GlobalStyles />
       
-      <Header/>
+      <Header />
+      <About />
       
     </ThemeProvider>
   );
