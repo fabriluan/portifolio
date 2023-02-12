@@ -8,11 +8,11 @@ function Contact(){
     return(
         <Center>
             <ContactSt>
-                <h2>Contato</h2>
-                <p>Cillum incididunt deserunt ut ipsum eiusmod ad aute sunt adipisicing amet. Magna id ex nulla culpa aliquip ad sint pariatur reprehenderit ad dolore sunt ipsum ea. Aliquip non sunt ullamco consequat aliquip pariatur id et. Sit veniam in cupidatat duis sint consequat sunt labore tempor.</p>
+                <h2>Entre em contato</h2>
+                <p>Se meus projetos te interessa e você pretende ter um serviço de qualidade e com o melhor custo beneficio mande uma mensagem para que possamos conversar e ter a melhor oferta para o seu serviço. Mande para o meu email, whatsapp ou para as minha redes sociais</p>
 
                 <ul>
-                    <li><MdEmail /> fabriciozambaocipriano@gmail.com</li>
+                    <li><MdEmail /> fabricio<wbr/>zambao<wbr/>cipriano<wbr/>@gmail.com</li>
                     <li><FaWhatsapp /> +55 42 9864-9151</li>
                 </ul>
 

@@ -1,6 +1,7 @@
 import * as Styles from "./styleProject";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
 import { FaReact, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { AiFillEye } from "react-icons/ai";
 import { SiStyledcomponents, SiJavascript, SiFirebase } from "react-icons/si";
 import { useState } from "react";
 
@@ -16,7 +17,7 @@ function Projects({project}){
 
     return(
         <Styles.ProjectsSt isHeigth={details}>
-            <img src={backgound} alt={'foto'} />
+            <a href={link1} target='blank'> <AiFillEye /> <img src={backgound} alt={'foto'} /> </a>
 
             <Styles.ProjectsInfo>
                 <h2>{name}</h2>

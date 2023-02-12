@@ -5,6 +5,7 @@ export const HeaderSt = styled.header `
     color: ${props => props.theme.text1};
     padding: 20px;
     position: fixed;
+    z-index: 99;
     width: 100%;
     top: 0;
 

@@ -11,15 +11,46 @@ export const ProjectsSt = styled.div `
     flex-direction: column;
     margin-bottom: 20px;
 
-    img{
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+    > a{
+        position: relative;
+        height: 210px;
+
+        svg{
+            opacity: 0;
+            position: absolute;
+            display: flex;
+            top: calc(50% - 1.5rem);
+            right: calc(50% - 1.5rem);
+            font-size: 3rem;
+            color: ${props => props.theme.text1};
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        :hover{
+
+            background-color: #000000;
+
+            img{
+                opacity: 0.2;
+                transition: 0.7s;
+            }
+            svg{
+                opacity: 1;
+                transition: 0.7s;
+            }
+
+        }
     }
 `
 
 export const ProjectsInfo = styled.article `
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +70,7 @@ export const ProjectsInfo = styled.article `
 export const InfoDetails = styled.div `
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     align-items: flex-start;
     text-align: start;
 
