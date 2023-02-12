@@ -27,11 +27,22 @@ export const ContactSt = styled.section `
             margin-bottom: 10px;
 
             + li{
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             svg{
+                min-width: 15px;
                 margin-right: 10px;
             }
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        margin: 40px 0;
+    }
+
+    @media screen and (max-width: 450px) {
+        li{
+            font-size: 5px;
         }
     }
 `

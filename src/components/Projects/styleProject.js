@@ -47,6 +47,16 @@ export const ProjectsSt = styled.div `
 
         }
     }
+
+
+    @media screen and (max-width: 910px) {
+        width: 80%;
+    } 
+
+    @media screen and (max-width: 720px) {
+        width: 100%;
+    }
+
 `
 
 export const ProjectsInfo = styled.article `
@@ -64,6 +74,12 @@ export const ProjectsInfo = styled.article `
     svg{
         cursor: pointer;
         padding: 1px;
+    }
+
+    @media screen and (max-width: 420px) {
+        h2{
+            font-size: 1.2rem;
+        }
     }
 `
 

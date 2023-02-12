@@ -10,6 +10,8 @@ export const SociasSt = styled.section `
         color: ${props => props.theme.text2};
         padding: 5px;
         margin-right: 30px;
+        text-align: center;
+        margin-bottom: 10px;
 
         :hover{
             color: ${props => props.theme.layout};
@@ -17,4 +19,9 @@ export const SociasSt = styled.section `
             transition: 0.7s;
         }
     }
+
+    ${props => props.isOn ?  '@media screen and (max-width: 450px){flex-direction: column;}' : '' }
+
+    ${props => props.isOn ?  '@media screen and (max-width: 450px){ a { :hover{ transform: scale(1) } } }' : '' }
+
 `

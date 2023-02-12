@@ -72,7 +72,7 @@ function Project(){
     ]
 
     return(
-        <ProjectSt>
+        <ProjectSt id="projetos">
 
             <h2>Projetos</h2>
 

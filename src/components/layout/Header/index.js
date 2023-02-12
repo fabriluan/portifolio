@@ -1,27 +1,52 @@
-import { HeaderSt } from "./styleHeader";
+import { App, Desktop, HeaderSt, Web } from "./styleHeader";
 import { Center } from '../../Center';
+import { Link, animateScroll as scroll } from "react-scroll";
+import { HiOutlineMenu } from "react-icons/hi";
+import { useState } from "react";
+import logo from "../../../assets/logo.png"
 
 function Header(){
 
+    const [show, setShow] = useState(false);
+
     const navLi = [
-        {name: 'Sobre', id: '#sobre'},
-        {name: 'Projetos', id: '#projetos'},
-        {name: 'Contato', id: '#contato'}
-    ]
+        {name: 'Sobre', id: 'sobre'},
+        {name: 'Projetos', id: 'projetos'},
+        {name: 'Contato', id: 'contato'}
+    ]   
+
+    const ToggleMenu = () => {
+        setShow(!show);
+    }
 
     return(
         <HeaderSt>
             <Center>
-                <h2>Logo</h2>
+                <img src={logo} alt="logo" />
 
-                <ul>
-                    {navLi.map((nav) => (
-                        <li>
-                            <a href={`${nav.id}`}>{nav.name}</a>
-                        </li>
-                    ))}
-                </ul>
+                <nav>
+                    <Web>
+                        {navLi.map((nav) => (
+                            <li>
+                                <Link to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.name}</Link>
+                            </li>
+                        ))}
+                    </Web>
+
+                        <HiOutlineMenu onClick={ToggleMenu} />
+                </nav>
             </Center>
+
+
+            {show && (
+                        <App>
+                            {navLi.map((nav) => (
+                                <li>
+                                    <Link onClick={ToggleMenu} to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.name}</Link>
+                                </li>
+                            ))}
+                        </App>
+                    )}
         </HeaderSt>
     )
 }

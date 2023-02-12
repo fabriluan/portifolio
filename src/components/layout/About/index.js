@@ -6,7 +6,7 @@ import Socias from "../../Sociais";
 function About(){
     return(
         <Center>
-            <AboutSt>
+            <AboutSt id="sobre">
                 <img src={logo} alt={'foto de perfil'} />
 
                 <AboutInfo>

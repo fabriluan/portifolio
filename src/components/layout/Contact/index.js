@@ -7,9 +7,9 @@ import { FaWhatsapp } from "react-icons/fa";
 function Contact(){
     return(
         <Center>
-            <ContactSt>
+            <ContactSt id='contato'>
                 <h2>Entre em contato</h2>
-                <p>Se meus projetos te interessa e você pretende ter um serviço de qualidade e com o melhor custo beneficio mande uma mensagem para que possamos conversar e ter a melhor oferta para o seu serviço. Mande para o meu email, whatsapp ou para as minha redes sociais</p>
+                <p>Se meus projetos te interessaram e você pretende ter um serviço de qualidade e com o melhor custo benefício mande uma mensagem para que possamos conversar e ter a melhor oferta para o seu serviço. Mande para o meu email, whatsapp ou para as minha redes sociais</p>
 
                 <ul>
                     <li><MdEmail /> fabricio<wbr/>zambao<wbr/>cipriano<wbr/>@gmail.com</li>
@@ -17,7 +17,7 @@ function Contact(){
                 </ul>
 
 
-                <Socias />
+                <Socias column={true}/>
             </ContactSt>
         </Center>
     )
