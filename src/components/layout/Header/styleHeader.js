@@ -4,6 +4,9 @@ export const HeaderSt = styled.header `
     background-color: ${props => props.theme.layout};
     color: ${props => props.theme.text1};
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 
     > .center{
         display: flex;

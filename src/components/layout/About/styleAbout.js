@@ -6,7 +6,7 @@ export const AboutSt = styled.section `
     display: flex;
     justify-content: space-between;
     background-color: ${props => props.theme.text1};
-    margin: 40px 0;
+    margin: 90px 0 40px 0;
     
     img{
         width: 100%;
@@ -32,4 +32,5 @@ export const AboutInfo = styled.div `
     p{
         font-size: 1.2rem;
     }
+    
 `

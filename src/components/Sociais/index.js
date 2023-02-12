@@ -4,9 +4,9 @@ import { SociasSt } from './styleSocias';
 function Socias(){
     return(
         <SociasSt>
-            <a href=""><BsInstagram /></a>
-            <a href=""><BsLinkedin /></a>
-            <a href=""><BsGithub /></a>
+            <a href="https://www.instagram.com/fabri_luan/" target={'blank'}><BsInstagram /></a>
+            <a href="https://www.linkedin.com/in/fabricio-cipriano-a72672248/" target={'blank'}><BsLinkedin /></a>
+            <a href="https://github.com/fabriluan" target={'blank'}><BsGithub /></a>
         </SociasSt>
     )
 }

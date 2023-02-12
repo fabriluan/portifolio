@@ -4,7 +4,6 @@ import { Center } from '../../Center';
 function Header(){
 
     const navLi = [
-        {name: 'Home', id: '#home'},
         {name: 'Sobre', id: '#sobre'},
         {name: 'Projetos', id: '#projetos'},
         {name: 'Contato', id: '#contato'}
