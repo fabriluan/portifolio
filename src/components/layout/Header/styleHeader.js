@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const HeaderSt = styled.header `
@@ -26,12 +27,19 @@ export const HeaderSt = styled.header `
     nav{
         position: relative;
 
-        svg{
+        button{
+            border: 0;
             display: none;
-            color: ${props => props.theme.text1};
-            font-size: 2rem;
             cursor: pointer;
+            background-color: transparent;
+
+            svg{            
+                color: ${props => props.theme.text1};
+                font-size: 2rem;
+            }
         }
+
+        
     }
 
     @media screen and (max-width: 910px) {
@@ -41,7 +49,7 @@ export const HeaderSt = styled.header `
             display: flex;
             justify-content: flex-end;
 
-            svg{
+            button{
                 display: flex;
             }
 
@@ -86,21 +94,22 @@ export const Web = styled.ul `
     }
 `
 
-export const App = styled.ul `
+export const App = motion(styled.ul `
     display: none;
-    position: absolute;
-    width: 110%;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     text-align: center;
     background-color: ${props => props.theme.div};
-    top: 68px;
+    top: 80px;
     right: 0px;
 
     li{
         a{
             display: block;
-            font-size: 1.2rem;
-            padding: 20px;
+            font-size: 1.4rem;
+            padding: 40px;
             border-bottom: 1px solid ${props => props.theme.text2};
 
             :hover{
@@ -113,4 +122,4 @@ export const App = styled.ul `
     @media screen and (max-width: 910px){
         display: block;
     }
-`
+`)
