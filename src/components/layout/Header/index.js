@@ -26,8 +26,8 @@ function Header(){
 
                 <nav>
                     <Web>
-                        {navLi.map((nav) => (
-                            <li>
+                        {navLi.map((nav, index) => (
+                            <li  key={index}>
                                 <Link to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.name}</Link>
                             </li>
                         ))}

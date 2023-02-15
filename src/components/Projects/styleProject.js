@@ -1,14 +1,17 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const ProjectsSt = styled.div `
+export const ProjectsSt = motion( styled.div `
     width: 32%;
-    height: ${props => props.isHeigth ? 'auto' : '300px'};
     color: ${props => props.theme.text2};
     padding: 15px;
+    height: auto;
+    min-height: 300px;
     background-color: ${props => props.theme.text1};
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
+    
     margin-bottom: 20px;
 
     > a{
@@ -57,7 +60,7 @@ export const ProjectsSt = styled.div `
         width: 100%;
     }
 
-`
+`)
 
 export const ProjectsInfo = styled.article `
     margin-top: 15px;
@@ -71,9 +74,12 @@ export const ProjectsInfo = styled.article `
         font-weight: 600;
     }
 
-    svg{
+    button{
+        display: flex;
+        border: 0;
+        background-color: transparent;
+        padding: 5px;
         cursor: pointer;
-        padding: 1px;
     }
 
     @media screen and (max-width: 420px) {
@@ -83,7 +89,7 @@ export const ProjectsInfo = styled.article `
     }
 `
 
-export const InfoDetails = styled.div `
+export const InfoDetails = motion( styled.div `
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -110,9 +116,9 @@ export const InfoDetails = styled.div `
         color: ${props => props.theme.layout};
         margin-top: 10px;
     }
-`
+`)
 
-export const Socias = styled.div `
+export const Socias = motion( styled.div `
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -129,4 +135,4 @@ export const Socias = styled.div `
             transition: 0.7s;
         }
     }
-`
+`)

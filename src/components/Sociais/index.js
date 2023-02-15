@@ -3,8 +3,6 @@ import { SociasSt } from './styleSocias';
 
 function Socias({column}){
 
-    console.log(column);
-
     return(
         <SociasSt isOn={column} >
             <a href="https://www.instagram.com/fabri_luan/" target={'blank'}><BsInstagram /></a>

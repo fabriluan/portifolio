@@ -6,6 +6,7 @@ import projeto02 from "../../../assets/project02.png";
 import projeto03 from "../../../assets/project03.png";
 import projeto04 from "../../../assets/project04.png";
 import projeto05 from "../../../assets/project05.png";
+import producao from "../../../assets/em_producao.jpg";
 
 function Project(){
 
@@ -69,6 +70,10 @@ function Project(){
             css: true,
             html: true,
         },
+        {
+            backgound: producao,
+            name: 'Site em Produção'
+        },
     ]
 
     return(
@@ -77,10 +82,10 @@ function Project(){
             <h2>Projetos</h2>
 
             <Center>
-                {projects.map((project) =>(
-                    <>
-                        <Projects project={project}/>
-                    </>
+                {projects.map((project, index) =>(
+                    
+                    <Projects key={index} project={project}/>
+                    
                 ))}
             </Center>
         </ProjectSt>
