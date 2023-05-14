@@ -8,20 +8,30 @@ export const HeaderSt = styled.header `
     position: fixed;
     z-index: 99;
     width: 100%;
-    top: 0;
+    max-width: 400px;
+    height: 100vh;
 
     > .center{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+    }
+
+    h1{
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-top: 20px;
     }
 
     img{
         display: flex;
-        width: 120px;
-        margin-bottom: -10px;
-        height: 50px;
+        width: 100%;
+        max-width: 220px;
+        height: 230px;
         object-fit: cover;
+        object-position: 100% 0%;
+        border-radius: 100% 100%;
     }
 
     nav{
@@ -62,33 +72,22 @@ export const HeaderSt = styled.header `
 
 export const Web = styled.ul `
     display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 
     li{
-        margin: 0 10px;
+        margin: 15px 0;
 
         a{
+            display: block;
             position: relative;
             color: ${props => props.theme.text1};
             padding: 5px;
-            font-size: 1.18rem;
+            font-size: 1.5rem;
 
-            ::after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 50%;
-                width: 0%;
-                height: 1px;
-                background-color: #ffffff;
-                
-            }
-            
             :hover{
-                ::after{
-                    width: 100%;
-                    right: 0;
-                    transition: 0.7s;
-                }
+                transform: scale(1.1);
+                transition: 0.7s;
             }
         }
     }

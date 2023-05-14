@@ -5,7 +5,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../../../assets/logo.png"
+import perfil from "../../../assets/foto_perfil.jpeg"
 
 function Header(){
 
@@ -35,7 +35,9 @@ function Header(){
     return(
         <HeaderSt>
             <Center>
-                <img src={logo} alt="logo" />
+                <img src={perfil} alt="logo" />
+
+                <h1>Fabricio L Z Cipriano</h1>
 
                 <motion.nav animate={show ? 'open' : 'closed'}>
                     <Web>

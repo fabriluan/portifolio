@@ -13,10 +13,10 @@ function App() {
       <GlobalStyles />
       
       <Header />
-      <About />
+      {/* <About />
       <Project />
       <Contact />
-      <Footer />
+      <Footer /> */}
       
     </ThemeProvider>
   );
