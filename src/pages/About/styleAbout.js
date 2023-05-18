@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
 export const AboutSt = styled.section `
-
-    padding: 40px 20px;
+    width: 100%;
+    /* padding: 40px 20px; */
     display: flex;
     justify-content: space-between;
-    background-color: ${props => props.theme.text1};
-    margin: 90px 0 40px 0;
+    /* background-color: ${props => props.theme.text1}; */
     
-    img{
+    /* img{
         width: 100%;
         max-width: 350px;
         height: 350px;
         object-fit: cover;
         border-radius: 100%;
-    }
+    } */
 
     @media screen and (max-width: 910px) {
         flex-direction: column;

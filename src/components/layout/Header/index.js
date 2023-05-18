@@ -1,7 +1,11 @@
-import { App, Desktop, HeaderSt, Web } from "./styleHeader";
-import { Center } from '../../Center';
+import { App, ButtonHeader, ButtonHeaderDown, Desktop, HeaderSt, Web } from "./styleHeader";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { HiOutlineMenu } from "react-icons/hi";
+import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
+import { BiTask } from "react-icons/bi";
+import { BsSun } from "react-icons/bs";
+import { AiOutlineHome } from "react-icons/ai";
+import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
@@ -12,9 +16,9 @@ function Header(){
     const [show, setShow] = useState(false);
 
     const navLi = [
-        {name: 'Sobre', id: 'sobre'},
-        {name: 'Projetos', id: 'projetos'},
-        {name: 'Contato', id: 'contato'}
+        {name: 'Sobre', id: 'sobre', icon: <AiOutlineHome/>},
+        {name: 'Projetos', id: 'projetos', icon: <BiTask/>},
+        {name: 'Contato', id: 'contato', icon: <IoChatbubbleEllipsesSharp/>}
     ]   
 
     const ToggleMenu = () => {
@@ -34,21 +38,27 @@ function Header(){
 
     return(
         <HeaderSt>
-            <Center>
+                <ButtonHeader>
+                    <RiMenuFoldFill />
+                </ButtonHeader>
+            
                 <img src={perfil} alt="logo" />
 
                 <h1>Fabricio L Z Cipriano</h1>
 
                 <motion.nav animate={show ? 'open' : 'closed'}>
+
                     <Web>
+
+
                         {navLi.map((nav, index) => (
                             <li  key={index}>
-                                <Link to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.name}</Link>
+                                <Link to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.icon}{nav.name}</Link>
                             </li>
                         ))}
                     </Web>
 
-                        <motion.button  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</motion.button>
+                        {/* <motion.button  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</motion.button> */}
 
 
                         <App variants={AnimateMenu}>
@@ -59,9 +69,11 @@ function Header(){
                             ))}
                         </App>
                 </motion.nav>
-            </Center>
             
-
+            
+                <ButtonHeaderDown>
+                    <BsSun />
+                </ButtonHeaderDown>
                     
         </HeaderSt>
     )

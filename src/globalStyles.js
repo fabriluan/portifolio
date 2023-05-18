@@ -25,6 +25,12 @@ const GlobalStyles = createGlobalStyle `
         text-decoration: none;
         cursor: pointer;
     }
+
+    .marginContent{
+        margin-left: 370px;
+        padding: 30px; 
+        display: flex;
+    }
 `
 
 export default GlobalStyles

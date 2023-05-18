@@ -4,22 +4,21 @@ import styled from "styled-components";
 export const HeaderSt = styled.header `
     background-color: ${props => props.theme.layout};
     color: ${props => props.theme.text1};
-    padding: 20px;
+    padding: 13px 0 16px 0;
+    /* margin-top: -20px; */
     position: fixed;
     z-index: 99;
     width: 100%;
-    max-width: 400px;
-    height: 100vh;
+    max-width: 370px;
+    height: 100%;
 
-    > .center{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
     h1{
-        font-size: 1.7rem;
+        font-size: 1.55rem;
         font-weight: 600;
         margin-top: 20px;
     }
@@ -28,7 +27,7 @@ export const HeaderSt = styled.header `
         display: flex;
         width: 100%;
         max-width: 220px;
-        height: 230px;
+        height: 220px;
         object-fit: cover;
         object-position: 100% 0%;
         border-radius: 100% 100%;
@@ -36,20 +35,7 @@ export const HeaderSt = styled.header `
 
     nav{
         position: relative;
-
-        button{
-            border: 0;
-            display: none;
-            cursor: pointer;
-            background-color: transparent;
-
-            svg{            
-                color: ${props => props.theme.text1};
-                font-size: 2rem;
-            }
-        }
-
-        
+        width: 100%;        
     }
 
     @media screen and (max-width: 910px) {
@@ -74,22 +60,58 @@ export const Web = styled.ul `
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 100%;
 
     li{
-        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        a{
-            display: block;
-            position: relative;
-            color: ${props => props.theme.text1};
-            padding: 5px;
-            font-size: 1.5rem;
+        :hover{
 
-            :hover{
-                transform: scale(1.1);
+            background-color: ${props => props.theme.layoutHover};
+
+            a{
+                transform: scale(1.05);
                 transition: 0.7s;
             }
+            transition: 0.7s;
         }
+
+        a{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            /* background-color: beige; */
+            position: relative;
+            color: ${props => props.theme.text1};
+            padding: 20px 5px;
+            font-size: 1.35rem;
+
+            svg{
+                display: flex;
+                /* background-color: red; */
+                font-size: 1.6rem;
+                margin-right: 10px;
+                /* padding: 10px; */
+            }
+        }
+    }
+`
+
+export const ButtonHeader = styled.button `
+    padding: 2px 7px;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.1rem;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+
+    :hover{
+        transform: scale(1.1);
+        transition: 0.7s;
     }
 `
 
@@ -122,3 +144,20 @@ export const App = motion(styled.ul `
         display: block;
     }
 `)
+
+export const ButtonHeaderDown = styled.button `
+    padding: 2px 7px;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.4rem;
+    margin-top: auto;
+    margin-left: 15px;
+    margin-right: auto;
+    cursor: pointer;
+
+    :hover{
+        transform: scale(1.1);
+        transition: 0.7s;
+    }
+`

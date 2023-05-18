@@ -1,5 +1,5 @@
-import Socias from '../../Sociais';
-import { Center } from './../../Center';
+
+import { Center } from '../../components/Center';
 import { ContactSt } from './styleContact';
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
@@ -16,8 +16,6 @@ function Contact(){
                     <li><FaWhatsapp /> +55 42 9864-9151</li>
                 </ul>
 
-
-                <Socias column={true}/>
             </ContactSt>
         </Center>
     )
