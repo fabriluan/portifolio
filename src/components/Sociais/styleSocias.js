@@ -11,11 +11,11 @@ export const SociasSt = styled.section `
         padding: 5px;
         margin-right: 30px;
         text-align: center;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
 
         :hover{
-            color: ${props => props.theme.layout};
-            transform: scale(1.25);
+            color: ${props => props.theme.div};
+            transform: scale(1.1);
             transition: 0.7s;
         }
     }

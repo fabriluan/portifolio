@@ -5,7 +5,6 @@ export const HeaderSt = styled.header `
     background-color: ${props => props.theme.layout};
     color: ${props => props.theme.text1};
     padding: 13px 0 16px 0;
-    /* margin-top: -20px; */
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -82,7 +81,8 @@ export const Web = styled.ul `
             display: flex;
             justify-content: left;
             align-items: center;
-            /* background-color: beige; */
+            justify-content: center;
+            width: 100%;
             position: relative;
             color: ${props => props.theme.text1};
             padding: 20px 5px;

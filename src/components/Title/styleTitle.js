@@ -5,6 +5,6 @@ export const TitleSt = styled.section `
     padding: 10px 0;
 
     h2{
-        font-size: 2.1rem;
+        font-size: 2.05rem;
     }
 `
