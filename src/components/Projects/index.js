@@ -13,46 +13,24 @@ function Projects({project}){
     // const [details, setDetails] = useState(false);
     const [show, setShow] = useState(false);
 
-    const boxPrinc = {
-        open: {height: 'auto', transition: { duration: 0 }},
-        closed: {height: '300px', transition: { duration: 1 }}
-    }
-
-    const boxInfo = {
-        open: {opacity: 1, height: 'auto', transition:  {type: 'spring' , duration: 3}},
-        closed: {opacity: 0, height: '0px', transition: { duration: 1},}
-    }
-
-    const item = {
-        open: { opacity: 1, y: 0, x: 0, transition: { type: "spring", duration: 3.5 }},
-        closed: { opacity: 0, y: -50, transition: { duration: 0.5 }, }
-    }
-
     function ChangeDetails(){
         setShow(!show)
     }
 
     return(
-        <Styles.ProjectsSt initial={false} animate ={ show ? 'open' : 'closed' } variants={boxPrinc} >
-            <a href={link1} target='blank'> <AiFillEye /> <img src={backgound} alt={'foto'} /> </a>
+        <Styles.ProjectsSt initial={false}>
+            <h1>{name}</h1>
+            <img src={backgound} alt={'foto'} />            
 
-            <Styles.ProjectsInfo>
-                <h2>{name}</h2>
+            <Styles.InfoDetails>
+                <h2>Detalhes</h2>
+                <p>{info}</p>
+                <a href={link1} target='blank'>Ir para o site</a>
+                <a href={link2} target='blank'>Repositório no Github</a>
 
-                <motion.button onClick={ChangeDetails} variants={{open: { rotate: 180 }, closed: { rotate: 0 }}} ><BiDownArrow size={'1.4rem'}/></motion.button>
-                
+                <h2>Tecnologias usadas</h2>
 
-            </Styles.ProjectsInfo>
-
-            <Styles.InfoDetails variants={boxInfo}>
-                <motion.h2 variants={item} >Detalhes</motion.h2>
-                <motion.p  variants={item} >{info}</motion.p>
-                <motion.a  variants={item} href={link1} target='blank'>Ir para o site</motion.a>
-                <motion.a  variants={item} href={link2} target='blank'>Repositório no Github</motion.a>
-
-                <motion.h2 variants={item}>Tecnologias usadas</motion.h2>
-
-                <Styles.Socias variants={item}>
+                <Styles.Socias>
                     
                     {react &&  <FaReact />}
                     {style && <SiStyledcomponents />}

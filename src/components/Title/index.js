@@ -1,9 +1,9 @@
 import { TitleSt } from "./styleTitle"
 
-export const Title = () => {
+export const Title = ({text}) => {
     return(
         <TitleSt>
-            <h2>Sobre</h2>
+            <h2>{text}</h2>
         </TitleSt>
     )
 }

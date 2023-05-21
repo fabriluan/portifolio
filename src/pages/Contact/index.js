@@ -10,7 +10,7 @@ function Contact(){
     return(
         <article className='marginContent'>
 
-            <Title />
+            <Title text={'Contato'} />
 
             <ContactSt>
                 <h2>Entre em contato</h2>

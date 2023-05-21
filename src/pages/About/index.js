@@ -22,7 +22,7 @@ function About(){
 
     return(
         <article className='marginContent'>
-            <Title />
+            <Title text={'Sobre'} />
 
             <AboutSt>
                 <h2>Fabricio Luan Zambão Cipriano</h2>
