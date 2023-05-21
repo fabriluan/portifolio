@@ -1,13 +1,14 @@
-import { App, ButtonHeader, ButtonHeaderDown, Desktop, HeaderSt, Web } from "./styleHeader";
+import { App, ButtonApp, ButtonHeader, ButtonHeaderDown, Desktop, HeaderSt, Web } from "./styleHeader";
 import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 import { BiTask } from "react-icons/bi";
 import { BsSun } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
-
+import { Center } from '../../Center';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
+import { HiOutlineMenu } from "react-icons/hi";
 import perfil from "../../../assets/foto_perfil.jpeg"
 import { Link } from "react-router-dom";
 
@@ -41,10 +42,14 @@ function Header(){
                 <ButtonHeader>
                     <RiMenuFoldFill />
                 </ButtonHeader>
-            
-                <img src={perfil} alt="logo" />
 
-                <h1>Fabricio L Z Cipriano</h1>
+                <Center>
+
+                <div className="classGroup">
+                    <img src={perfil} alt="logo" />
+
+                    <h1>Fabricio L Z Cipriano</h1>
+                </div>
 
                 <motion.nav animate={show ? 'open' : 'closed'}>
 
@@ -58,17 +63,19 @@ function Header(){
                         ))}
                     </Web>
 
-                        {/* <motion.button  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</motion.button> */}
+                        <ButtonApp  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</ButtonApp>
 
 
                         <App variants={AnimateMenu}>
                             {navLi.map((nav, index) => (
-                                <li key={index}>
-                                    <Link onClick={ToggleMenu} to={`${nav.id}`} smooth={true} offset={-68} duration={700}>{nav.name}</Link>
+                                <li  key={index}>
+                                    <Link to={`${nav.id}`} >{nav.icon}{nav.name}</Link>
                                 </li>
                             ))}
                         </App>
                 </motion.nav>
+
+            </Center>
             
             
                 <ButtonHeaderDown>

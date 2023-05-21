@@ -78,15 +78,15 @@ function Project(){
 
         <article className='marginContent'>
 
-            <Title text={'Projetos'} />
+            <Center>
+                <Title text={'Projetos'} />
 
-                <Center>
                     {projects.map((project, index) =>(
                         
                         <Projects key={index} project={project}/>
                         
                     ))}
-                </Center>
+            </Center>
             
         </article>
     )

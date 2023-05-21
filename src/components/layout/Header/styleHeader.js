@@ -16,6 +16,12 @@ export const HeaderSt = styled.header `
     align-items: center;
 
 
+    .classGroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     h1{
         font-size: 1.55rem;
         font-weight: 600;
@@ -37,20 +43,44 @@ export const HeaderSt = styled.header `
         width: 100%;        
     }
 
-    @media screen and (max-width: 910px) {
-        nav{
+    @media screen and (max-width: 1260px){
+        width: 100%;
+        padding: 10px 5px;
+        height: 100px;
+        max-width: none;
+        height: auto;
+        border-bottom: 1px solid ${props => props.theme.text2};
 
-            width: 100%;
+        > .center{
             display: flex;
-            justify-content: flex-end;
+            flex-direction: row;
+            justify-content: space-between;
 
-            button{
-                display: flex;
-            }
+        }
 
-            ul:nth-child(1){
-                display: none;
+
+        img{
+            width: 55px;
+            height: 55px;
+        }
+
+        .classGroup{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                margin-top: 0;
+                font-size: 1.4rem;
+                margin-left: 10px;
             }
+        }
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            justify-content: center;
         }
     }
 `
@@ -97,6 +127,59 @@ export const Web = styled.ul `
             }
         }
     }
+
+    @media screen and (max-width: 1260px){
+        margin-top: 0;
+        flex-direction: row;
+        /* background-color: red; */
+
+        li{
+
+            margin: 0 10px;
+
+            :hover{
+                background-color: ${props => props.theme.layout};
+
+                a{
+                    transform: none;
+                }
+            }
+
+            a{
+                padding: 5px 15px;
+
+                ::after{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0%;
+                    height: 1px;
+                    content: '';
+                    background-color: ${props => props.theme.div};
+                }
+
+                svg{
+                    display: none;
+                }
+
+                :hover{
+                    color: ${props => props.theme.div};
+                    transition: 0.7s;
+
+                    ::after{
+                        width: 100%;
+                        left: 0%;
+                        content: '';
+                        transition: 0.7s;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1000px){
+            display: none;
+        }
+    }
 `
 
 export const ButtonHeader = styled.button `
@@ -113,6 +196,10 @@ export const ButtonHeader = styled.button `
         transform: scale(1.1);
         transition: 0.7s;
     }
+
+    @media screen and (max-width: 1260px){
+        display: none;
+    }
 `
 
 export const App = motion(styled.ul `
@@ -122,8 +209,8 @@ export const App = motion(styled.ul `
     width: 100vw;
     overflow: hidden;
     text-align: center;
-    background-color: ${props => props.theme.div};
-    top: 80px;
+    background-color: ${props => props.theme.layoutHover};
+    top: 76px;
     right: 0px;
 
     li{
@@ -131,17 +218,34 @@ export const App = motion(styled.ul `
             display: block;
             font-size: 1.4rem;
             padding: 40px;
-            border-bottom: 1px solid ${props => props.theme.text2};
+            color: ${props => props.theme.background};
+            border-bottom: 1px solid ${props => props.theme.background};
 
             :hover{
                 background-color: ${props => props.theme.layout};
+                color: ${props => props.theme.div};
                 transition: 0.7s;
             }
         }
     }
 
-    @media screen and (max-width: 910px){
+    @media screen and (max-width: 1000px){
         display: block;
+    }
+`)
+
+export const ButtonApp = motion(styled.button `
+    display: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
     }
 `)
 
@@ -159,5 +263,23 @@ export const ButtonHeaderDown = styled.button `
     :hover{
         transform: scale(1.1);
         transition: 0.7s;
+    }
+
+    @media screen and (max-width: 1260px){
+        /* display: none; */
+
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: ${props => props.theme.div};
+        padding: 15px;
+        color: ${props => props.theme.background};
+        border-radius: 100% 100%;
+        border: 1px solid ${props => props.theme.text2};
+
+        :hover{
+            transform: none;
+            background-color: ${props => props.theme.divHover};
+        }
     }
 `

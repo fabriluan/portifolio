@@ -10,11 +10,19 @@ export const ContactSt = styled.section `
     h2{
         font-size: 1.7rem;
         margin: 10px 0;
+
+        @media screen and (max-width: 510px) {
+            text-align: center;
+        }
     }
 
     p{
         margin: 10px 0;
         font-size: 1.15rem;
+
+        @media screen and (max-width: 510px) {
+            text-align: center;
+        }
     }
 
     ul{
@@ -68,19 +76,32 @@ export const ContactSt = styled.section `
         }
     }
 
-    @media screen and (max-width: 600px){
-        margin: 40px 0;
-    }
+    @media screen and (max-width: 820px) {
+        ul{
+            align-items: start;
+            flex-direction: column;
 
-    @media screen and (max-width: 450px) {
-        li{
-            font-size: 5px;
+            > section{
+
+                margin-top: 10px;
+                justify-content: flex-start;
+
+                a{
+                    margin-right: 0px;
+                }
+
+                a + a{
+                    margin-left: 25px;
+                }
+            }
         }
     }
+
 `
 
 export const TextContact = styled.h2`
     margin: 15px auto;
+    text-align: center;
     font-size: 2rem;
     font-weight: 200;
 `
@@ -95,6 +116,10 @@ export const FormContact = styled.form `
     h2{
         font-size: 1.7rem;
         margin: 10px 0;
+
+        @media screen and (max-width: 510px) {
+            text-align: center;
+        }
     }
 
     > div{
@@ -140,5 +165,9 @@ export const FormContact = styled.form `
             transition: 0.7s;
             background-color: ${props => props.theme.divHover};
         }
+    }
+
+    @media screen and (max-width: 820px){
+        padding: 10px;
     }
 `

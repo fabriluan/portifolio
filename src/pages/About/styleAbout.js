@@ -25,7 +25,7 @@ export const AboutSt = styled.section `
         justify-content: space-between;
 
         p{
-            width: 79%;
+            width: 76%;
         }
     }
     
@@ -40,20 +40,28 @@ export const AboutSt = styled.section `
         top: -20px;
     }
 
-    @media screen and (max-width: 910px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    @media screen and (max-width: 1000px) {
+        > div{
+            p{
+                width: 70%;
+            }
+        }
     }
 
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 820px) {
+        
+        > div{
 
-        align-items: center;
-        justify-content: center;
+            flex-direction: column;
+
+            p{
+                width: 100%;
+            }
+        }
 
         img{
-            max-width: 220px;
-            height: 220px;
+            top: -5px;
+            margin: 10px 0;
         }
     }
 `
@@ -87,9 +95,10 @@ export const AboutInfo = styled.div `
 
 export const Skills = styled.section `
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 10px 5px;
-
+    
     div{
         padding: 5px;
         display: flex;
@@ -105,6 +114,16 @@ export const Skills = styled.section `
             margin-top: 7px;
             font-size: 1.35rem;
         }
+    }
+
+    @media screen and (max-width: 480px) {
+        
+        flex-direction: column;
+
+        div{
+            margin: 5px 0;
+        }
+        
     }
 
 `
@@ -125,5 +144,10 @@ export const ButtonPage = styled.button `
         transform: scale(1.01);
         transition: 0.7s;
         background-color: ${props => props.theme.divHover};
+    }
+
+    @media screen and (max-width: 520px) {
+        max-width: none;
+        /* background-color: red; */
     }
 `

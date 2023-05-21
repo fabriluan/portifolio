@@ -20,14 +20,6 @@ export const ProjectsSt = motion( styled.div `
         font-weight: 600;
     }
 
-    @media screen and (max-width: 910px) {
-        width: 80%;
-    } 
-
-    @media screen and (max-width: 720px) {
-        width: 100%;
-    }
-
 `)
 
 

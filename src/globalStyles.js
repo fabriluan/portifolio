@@ -34,6 +34,11 @@ const GlobalStyles = createGlobalStyle `
         padding: 15px 30px; 
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 1260px){
+            padding: 80px 0; 
+            margin-left: 0px;
+        }
     }
 
 `

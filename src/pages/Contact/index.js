@@ -5,10 +5,13 @@ import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import Socias from "../../components/Sociais";
 import { ButtonPage } from "../About/styleAbout";
+import { Center } from "../../components/Center";
 
 function Contact(){
     return(
         <article className='marginContent'>
+
+            <Center>
 
             <Title text={'Contato'} />
 
@@ -49,6 +52,8 @@ function Contact(){
 
                 <input type="submit" />
             </FormContact>
+
+            </Center>
         </article>
     )
 }

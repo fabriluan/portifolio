@@ -2,7 +2,7 @@ import { CenterSt } from "./styleCenter";
 
 export function Center({children, classCenter}){
     return(
-        <CenterSt className={ classCenter } >
+        <CenterSt className={ 'center' } >
             {children}
         </CenterSt>
     )
