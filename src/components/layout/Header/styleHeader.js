@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const HeaderSt = styled.header `
+export const HeaderSt = motion(styled.header `
     background-color: ${props => props.theme.layout};
     color: ${props => props.theme.text1};
     padding: 13px 0 16px 0;
@@ -83,9 +83,9 @@ export const HeaderSt = styled.header `
             justify-content: center;
         }
     }
-`
+`)
 
-export const Web = styled.ul `
+export const Web = motion(styled.ul `
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -109,7 +109,6 @@ export const Web = styled.ul `
 
         a{
             display: flex;
-            justify-content: left;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -120,7 +119,6 @@ export const Web = styled.ul `
 
             svg{
                 display: flex;
-                /* background-color: red; */
                 font-size: 1.6rem;
                 margin-right: 10px;
                 /* padding: 10px; */
@@ -180,7 +178,7 @@ export const Web = styled.ul `
             display: none;
         }
     }
-`
+`)
 
 export const ButtonHeader = styled.button `
     padding: 2px 7px;

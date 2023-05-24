@@ -14,13 +14,7 @@ import { Link } from "react-router-dom";
 
 function Header(){
 
-    const [show, setShow] = useState(false);
-
-    const navLi = [
-        {name: 'Sobre', id: '/', icon: <AiOutlineHome/>},
-        {name: 'Projetos', id: '/projetos', icon: <BiTask/>},
-        {name: 'Contato', id: '/contato', icon: <IoChatbubbleEllipsesSharp/>}
-    ]   
+    const [show, setShow] = useState(true);
 
     const ToggleMenu = () => {
         setShow(!show);
@@ -28,8 +22,13 @@ function Header(){
 
 
     const AnimateMenu = {
-        open: {opacity: 1, height: '100vh', transition: {type: 'spring' , duration: 3}},
-        closed: {opacity: 0, height: '0vh', transition: { duration: 1}},
+        open: {width: '370px', transition: { duration: 1.5 }},
+        closed: {width: '0%', transition: { duration: 1.3}},
+    }
+
+    const AnimateLink = {
+        open: { background: 'red'},
+        closed: { transition: { duration: 1.3}},
     }
 
     const AnimateButton = {
@@ -37,9 +36,15 @@ function Header(){
         closed: { rotate: 0}
     }
 
+    const navLi = [
+        {name: 'Sobre', id: '/', icon: <motion.AiOutlineHome variants={AnimateLink} />},
+        {name: 'Projetos', id: '/projetos', icon: <BiTask variants={AnimateLink}/>},
+        {name: 'Contato', id: '/contato', icon: <IoChatbubbleEllipsesSharp variants={AnimateLink}/>}
+    ];
+
     return(
-        <HeaderSt>
-                <ButtonHeader>
+        <HeaderSt initial={false} animate={show ? 'open' : 'closed'} variants={AnimateMenu} >
+                <ButtonHeader onClick={ ToggleMenu }>
                     <RiMenuFoldFill />
                 </ButtonHeader>
 
@@ -51,14 +56,13 @@ function Header(){
                     <h1>Fabricio L Z Cipriano</h1>
                 </div>
 
-                <motion.nav animate={show ? 'open' : 'closed'}>
+                <nav>
 
                     <Web>
 
-
                         {navLi.map((nav, index) => (
                             <li  key={index}>
-                                <Link to={`${nav.id}`} >{nav.icon}{nav.name}</Link>
+                                <Link to={`${nav.id}`} > {nav.icon} <span>{nav.name}</span></Link>
                             </li>
                         ))}
                     </Web>
@@ -66,14 +70,14 @@ function Header(){
                         <ButtonApp  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</ButtonApp>
 
 
-                        <App variants={AnimateMenu}>
+                        <App>
                             {navLi.map((nav, index) => (
                                 <li  key={index}>
                                     <Link to={`${nav.id}`} >{nav.icon}{nav.name}</Link>
                                 </li>
                             ))}
                         </App>
-                </motion.nav>
+                </nav>
 
             </Center>
             
