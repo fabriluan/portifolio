@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const HeaderSt = motion(styled.header `
+export const HeaderSt = styled.header `
     background-color: ${props => props.theme.layout};
     color: ${props => props.theme.text1};
     padding: 13px 0 16px 0;
@@ -83,9 +83,9 @@ export const HeaderSt = motion(styled.header `
             justify-content: center;
         }
     }
-`)
+`
 
-export const Web = motion(styled.ul `
+export const Web = styled.ul `
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -178,9 +178,10 @@ export const Web = motion(styled.ul `
             display: none;
         }
     }
-`)
+`
 
 export const ButtonHeader = styled.button `
+    display: none !important; 
     padding: 2px 7px;
     display: flex;
     background-color: transparent;
@@ -200,7 +201,7 @@ export const ButtonHeader = styled.button `
     }
 `
 
-export const App = motion(styled.ul `
+export const App = styled.ul `
     display: none;
     position: fixed;
     height: 100vh;
@@ -230,9 +231,9 @@ export const App = motion(styled.ul `
     @media screen and (max-width: 1000px){
         display: block;
     }
-`)
+`
 
-export const ButtonApp = motion(styled.button `
+export const ButtonApp = styled.button `
     display: none;
     background-color: transparent;
     border: 0;
@@ -245,10 +246,11 @@ export const ButtonApp = motion(styled.button `
     @media screen and (max-width: 1000px) {
         display: flex;
     }
-`)
+`
 
 export const ButtonHeaderDown = styled.button `
     padding: 2px 7px;
+    display: none !important;
     display: flex;
     background-color: transparent;
     border: 0;

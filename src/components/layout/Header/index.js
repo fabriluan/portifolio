@@ -6,7 +6,6 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
 import { Center } from '../../Center';
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenu } from "react-icons/hi";
 import perfil from "../../../assets/foto_perfil.jpeg"
@@ -14,36 +13,18 @@ import { Link } from "react-router-dom";
 
 function Header(){
 
-    const [show, setShow] = useState(true);
-
+    const [show, setShow] = useState(true);    
     const ToggleMenu = () => {
         setShow(!show);
     }
-
-
-    const AnimateMenu = {
-        open: {width: '370px', transition: { duration: 1.5 }},
-        closed: {width: '0%', transition: { duration: 1.3}},
-    }
-
-    const AnimateLink = {
-        open: { background: 'red'},
-        closed: { transition: { duration: 1.3}},
-    }
-
-    const AnimateButton = {
-        open: { rotate: 180}, 
-        closed: { rotate: 0}
-    }
-
     const navLi = [
-        {name: 'Sobre', id: '/', icon: <motion.AiOutlineHome variants={AnimateLink} />},
-        {name: 'Projetos', id: '/projetos', icon: <BiTask variants={AnimateLink}/>},
-        {name: 'Contato', id: '/contato', icon: <IoChatbubbleEllipsesSharp variants={AnimateLink}/>}
+        {name: 'Sobre', id: '/', icon: <AiOutlineHome/>},
+        {name: 'Projetos', id: '/projetos', icon: <BiTask />},
+        {name: 'Contato', id: '/contato', icon: <IoChatbubbleEllipsesSharp/>}
     ];
 
     return(
-        <HeaderSt initial={false} animate={show ? 'open' : 'closed'} variants={AnimateMenu} >
+        <HeaderSt>
                 <ButtonHeader onClick={ ToggleMenu }>
                     <RiMenuFoldFill />
                 </ButtonHeader>
@@ -67,7 +48,7 @@ function Header(){
                         ))}
                     </Web>
 
-                        <ButtonApp  onClick={ToggleMenu} variants={ AnimateButton }> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</ButtonApp>
+                        <ButtonApp  onClick={ToggleMenu}> {show ? <AiOutlineClose /> : <HiOutlineMenu /> }</ButtonApp>
 
 
                         <App>
