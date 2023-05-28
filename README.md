@@ -32,13 +32,11 @@
 
 ## Capturas de tela 📸
 
-<img src="github/imagem1.png" width='100%'/>
+<img src="github/img.png" width='100%'/>
 
-<img src="github/imagem2.png" width='100%'/>
+<img src="github/img2.png" width='100%'/>
 
-<img src="github/imagem3.png" width='100%'/>
-
-<img src="github/imagem4.png" width='100%'/>
+<img src="github/img3.png" width='100%'/>
 
 <hr/>
 
@@ -47,6 +45,8 @@
 <ul>
     <li>Sistema rotas sem atualização da página</li>
     <li>Botão de dowload do CV</li>
+    <li>Tema de Dark/Ligth</li>
+    <li>Formulario funcional</li>
     <li>O site é totalmente responsivel</li>
 </ul>
 
@@ -55,9 +55,9 @@
 ## Futuras Tasks ✍️
 
 <ul>
-    <li>Sistema de animação para menu desktop - mobile</li>
-    <li>Theme dark e ligth</li>
-    <li>Envio de formulário dinâmico</li>
+    <li>Melhorar design dos projetos</li>
+    <li>Adcionar api via nodeJs</li>
+    <li>Melhorar tema dark</li>
 </ul>
 
 <hr>
