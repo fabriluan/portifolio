@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle `
 
     body{
         background-color: ${props => props.theme.background};
-        color: ${props => props.theme.text2};
+        color: ${props => props.theme.text1};
     }
 
     ul{
@@ -39,6 +39,11 @@ const GlobalStyles = createGlobalStyle `
             padding: 80px 0; 
             margin-left: 0px;
         }
+    }
+
+    .marginContentMenu{
+        padding: 15px 55px; 
+        margin-left: 100px !important;
     }
 
 `

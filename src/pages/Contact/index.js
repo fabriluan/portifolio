@@ -6,10 +6,58 @@ import { FaWhatsapp } from "react-icons/fa";
 import Socias from "../../components/Sociais";
 import { ButtonPage } from "../About/styleAbout";
 import { Center } from "../../components/Center";
+import { motion } from "framer-motion";
+import { AuthContext } from "../../contexts/theme";
+import { useContext } from "react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Contact(){
+
+    const { menu } = useContext(AuthContext);
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [mensagem, setMensagem] = useState('');
+    const [verif, setVerif] = useState(false);
+
+    function SendForm(e){
+        e.preventDefault();
+        setVerif(true);
+
+        
+        if(name === '' || email === '' || mensagem === ''){
+            toast.error("Os campos estão vazios!");
+            setVerif(false);
+            return;
+        }
+
+        const form_template = {
+            name: name,
+            email: email,
+            menssage: mensagem,
+        }
+
+        emailjs.send('service_ht3828j', 'template_ajwbvia', form_template, 'Vc5KoH6YUxomuA_GV')
+        .then((response) => {
+
+            toast.success("O email foi enviado!");
+
+            setEmail('')
+            setName('')
+            setMensagem('')
+            setVerif(false);
+        }).catch(()=>{
+            toast.error("Não foi impossível enviar!");
+            setVerif(false);
+        })  
+
+        setVerif(false);
+        }
+
     return(
-        <article className='marginContent'>
+        <motion.article className={ menu ? 'marginContent' : 'marginContentMenu'} layout transition={ menu ? {delay: 0} : {delay: 0.3}}>
 
             <Center>
 
@@ -32,29 +80,40 @@ function Contact(){
 
             <TextContact>Ou</TextContact>
 
-            <FormContact>
+            <FormContact name="contatc">
                 <h2>Mande sua mensagem</h2>
 
                 <div>
                     <label for="">Seu nome</label>
-                    <input type="text" placeholder="Digite seu nome" />
+                    <input 
+                    type="text" 
+                    value={name} 
+                    onChange={ (e) => setName(e.target.value)} 
+                    placeholder="Digite seu nome" />
                 </div>
 
                 <div>
                     <label for="">Seu email</label>
-                    <input type="text" placeholder="Digite seu email" />
+                    <input 
+                    type="email" 
+                    value={email} 
+                    onChange={ (e) => setEmail(e.target.value)}
+                    placeholder="Digite seu email" />
                 </div>
 
                 <div>
                     <label for="">Sua mensagem</label>
-                    <textarea placeholder="Digite sua mensagem"></textarea>
+                    <textarea
+                    value={mensagem} 
+                    onChange={ (e) => setMensagem(e.target.value)}
+                    placeholder="Digite sua mensagem"></textarea>
                 </div>
 
-                <input type="submit" />
+                <button type="submit" onClick={ SendForm }>{verif ? 'Enviando...' : 'Enviar'}</button>
             </FormContact>
 
             </Center>
-        </article>
+        </motion.article>
     )
 }
 

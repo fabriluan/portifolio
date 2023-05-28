@@ -25,14 +25,14 @@ export const AboutSt = styled.section `
         justify-content: space-between;
 
         p{
-            width: 76%;
+            max-width: 76%;
         }
     }
     
     img{
         width: 100%;
-        max-width: 210px;
-        height: 210px;
+        max-width: 250px;
+        height: 250px;
         object-fit: cover;
         object-position: 100% 20%;
         border-radius: 100%;
@@ -128,17 +128,18 @@ export const Skills = styled.section `
 
 `
 
-export const ButtonPage = styled.button `
+export const ButtonPage = styled.a `
+    display: block;
+    text-align: center;
     width: 100%;
     max-width: 240px;
     cursor: pointer;
-    padding: 7px 0;
+    padding: 7px;
     border: 1px solid ${props => props.theme.divHover};
     background-color: ${props => props.theme.div};
     font-weight: 300;
     font-size: 1.5rem;
-    color: ${props => props.theme.background};
-    margin: 0 auto;
+    color: ${props => props.theme.text2};
     
     :hover{
         transform: scale(1.01);

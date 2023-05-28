@@ -148,7 +148,7 @@ export const FormContact = styled.form `
         
     }
 
-    input[type="submit"]{
+    button{
         width: 100%;
         max-width: 190px;
         cursor: pointer;
@@ -157,7 +157,7 @@ export const FormContact = styled.form `
         background-color: ${props => props.theme.div};
         font-weight: 300;
         font-size: 1.4rem;
-        color: ${props => props.theme.background};
+        color: ${props => props.theme.text2};
         margin: 20px 0 0 auto;
         
         :hover{

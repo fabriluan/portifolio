@@ -7,7 +7,7 @@ export const SociasSt = styled.section `
 
     a{
         font-size: 1.8rem;
-        color: ${props => props.theme.text2};
+        color: ${props => props.theme.text1};
         padding: 5px;
         margin-right: 30px;
         text-align: center;

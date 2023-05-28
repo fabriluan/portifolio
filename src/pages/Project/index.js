@@ -8,8 +8,13 @@ import projeto02 from "../../assets/project02.png";
 import projeto03 from "../../assets/project03.png";
 import projeto04 from "../../assets/project04.png";
 import projeto05 from "../../assets/project05.png";
+import {motion } from 'framer-motion';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/theme';
 
 function Project(){
+
+    const { menu } = useContext(AuthContext);
 
     const projects = [
         {
@@ -76,7 +81,7 @@ function Project(){
 
     return(
 
-        <article className='marginContent'>
+        <motion.article className={ menu ? 'marginContent' : 'marginContentMenu'} layout transition={ menu ? {delay: 0} : {delay: 0.3}}>
 
             <Center>
                 <Title text={'Projetos'} />
@@ -88,7 +93,7 @@ function Project(){
                     ))}
             </Center>
             
-        </article>
+        </motion.article>
     )
 }
 

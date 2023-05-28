@@ -48,7 +48,7 @@ export const InfoDetails = motion( styled.div `
 
     a{
         text-decoration: underline;
-        color: ${props => props.theme.divHover};
+        color: ${props => props.theme.text1};
         margin-top: 10px;
     }
 `)
